@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <>
             <Head>
-                <title>Gregory Sanchez - Full Stack Developer</title>
+                <title>Home - Mediation - Scout Anatricia</title>
                 <link rel="icon" href="/favicon.ico" />
 
                 {/*// <!-- Chrome, Firefox OS and Opera -->*/}
