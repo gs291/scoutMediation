@@ -27,20 +27,8 @@ export default function Home() {
         <>
             <Navigation />
             <Container maxWidth="lg">
-                <IndexContainer>
-                    {/*<TitleDivider title="About Me" id="about-me" />*/}
-                    {/*<AboutMe setOpenModal={setOpenModal}/>*/}
-                </IndexContainer>
-                <IndexContainer>
-                    {/*<TitleDivider title="Experience" id="experience" />*/}
-                    {/*<Experiences />*/}
-                </IndexContainer>
-                <IndexContainer>
-                    {/*<TitleDivider title="Projects" id="projects" />*/}
-                    {/*<Projects />*/}
-                </IndexContainer>
+
             </Container>
-            {/*<ContactMeModal open={openModal} setOpen={setOpenModal} />*/}
         </>
     )
 }
