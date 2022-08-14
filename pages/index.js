@@ -2,13 +2,6 @@ import {useState} from 'react';
 import {Container} from '@mui/material';
 import {styled} from '@mui/material/styles';
 
-// import AboutMe from '../components/index/AboutMe';
-// import Projects from '../components/project/Projects';
-import Navigation from '../components/page/Navigation';
-// import TitleDivider from '../components/title/TitleDivider';
-// import Experiences from '../components/experience/Experiences';
-// import ContactMeModal from '../components/modal/ContactMeModal';
-
 
 const IndexContainer = styled('div')`
   display: flex;
@@ -25,7 +18,6 @@ export default function Home() {
 
     return (
         <>
-            <Navigation />
             <Container maxWidth="lg">
 
             </Container>
