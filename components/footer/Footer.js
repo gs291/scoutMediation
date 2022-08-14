@@ -1,3 +1,5 @@
+import {Typography} from '@mui/material';
+
 import {styled} from '@mui/material/styles';
 
 
@@ -12,7 +14,9 @@ export default function Footer({ className }) {
 
     return (
         <FooterContainer className={className}>
-
+            <Typography variant="h5">
+                Add any footer text/links here.
+            </Typography>
         </FooterContainer>
     );
 }
