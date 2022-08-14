@@ -1,17 +1,8 @@
 import {useState} from 'react';
 import {Container} from '@mui/material';
-import {styled} from '@mui/material/styles';
 
+import HomePage from '../components/index/HomePage';
 
-const IndexContainer = styled('div')`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  width: 100%;
-  margin-bottom: 50px;
-`;
 
 export default function Home() {
     const [openModal, setOpenModal] = useState(false);
@@ -19,7 +10,7 @@ export default function Home() {
     return (
         <>
             <Container maxWidth="lg">
-
+                <HomePage />
             </Container>
         </>
     )
