@@ -1,12 +1,10 @@
-import PageCard from '../card/PageCard';
+import ContactBox from './ContactBox';
 
 export default function ContactPage({}) {
 
     return (
         <>
-            <PageCard>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Contact.
-            </PageCard>
+            <ContactBox includeTitle={false}/>
         </>
     );
 }
