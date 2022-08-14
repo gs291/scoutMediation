@@ -5,7 +5,7 @@ const BodyContainer = styled('div')`
   padding: 2em 1em;
 `;
 
-export default function ContactFields({errors, form, setForm}) {
+export default function ContactFields({errors, form, setForm, messageLabel}) {
 
     const handleChange = (e) => {
         setForm(prevForm => ({...prevForm, [e.target.name]: e.target.value}));
@@ -53,14 +53,14 @@ export default function ContactFields({errors, form, setForm}) {
                     required
                     fullWidth
                     name="message"
-                    label="Please describe the nature of your case"
+                    label={messageLabel}
                     multiline
                     rows={4}
                     margin="normal"
                     onChange={handleChange}
                     value={form.message}
                     error={errors.message}
-                    {...(errors.message ? {helperText: "Can't have an empty description"} : null)}
+                    {...(errors.message ? {helperText: "Can't have an empty message"} : null)}
                 />
             </BodyContainer>
         </>

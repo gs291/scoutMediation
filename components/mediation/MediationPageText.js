@@ -9,11 +9,11 @@ const MediationText = styled(Typography)`
 `;
 
 
-export default function MediationPageText({}) {
+export default function MediationPageText({...rest}) {
 
     return (
         <>
-            <PageCard>
+            <PageCard {...rest}>
                 <MediationText variant="h3" component="h2">
                     Your mediation with Scout Anatricia is just a consultation away.
                 </MediationText>

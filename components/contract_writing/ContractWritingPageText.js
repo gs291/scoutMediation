@@ -17,12 +17,12 @@ const LegislatureLink = styled(MUILink)`
 `;
 
 
-export default function ContractWritingPageText({}) {
+export default function ContractWritingPageText({...rest}) {
 
     return (
         <>
-            <PageCard>
-                <ContractWritingText variant="h3" component="h2">
+            <PageCard {...rest}>
+                <ContractWritingText variant="h4" component="h2">
                     <Link
                         passHref
                         target="_blank"
