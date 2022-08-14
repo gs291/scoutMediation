@@ -11,13 +11,14 @@ const HomeContainer = styled('div')`
   margin-top: 30px;
 `;
 
+
 export default function HomePage({}) {
 
     return (
         <>
             <HomeContainer>
-                <HomeImageColumn />
-                <HomeDescription />
+                <HomeImageColumn sx={{width: '30%'}}/>
+                <HomeDescription sx={{width: '70%'}}/>
             </HomeContainer>
         </>
     );

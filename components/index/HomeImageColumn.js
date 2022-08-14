@@ -5,7 +5,6 @@ import HomeAboutMe from './HomeAboutMe';
 const ColumnContainer = styled('div')`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 15px 0;
 `;
@@ -17,11 +16,11 @@ const ImageContainer = styled('div')`
   background-color: gray;
 `;
 
-export default function HomeImageColumn({}) {
+export default function HomeImageColumn({...rest}) {
 
     return (
         <>
-            <ColumnContainer>
+            <ColumnContainer {...rest}>
                 <ImageContainer>
 
                 </ImageContainer>
