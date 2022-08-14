@@ -31,7 +31,7 @@ const store = configureStore();
 export default function App({ Component, pageProps }) {
 
     useEffect(() => {
-        // ga4Initialize();
+        ga4Initialize();
     }, []);
 
     return (

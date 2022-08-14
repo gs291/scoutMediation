@@ -1,19 +1,10 @@
 import Link from 'next/link';
 import {useSelector} from 'react-redux';
 import {styled} from '@mui/material/styles';
-import {AppBar, Toolbar, Typography, Link as MUILink} from '@mui/material';
+import {Typography, Link as MUILink, Toolbar} from '@mui/material';
 
 import {getMobile} from '../../lib/redux/selectors';
 import {globalOptions} from '../../lib/utils/emotionStyled';
-
-
-const NavAppBar = styled(AppBar, globalOptions)`
-  padding: ${props => props['data-m'] ? 1 : 2}em 0;
-  margin-bottom: 2em;
-  transition: 0.3s;
-  
-  background-color: ${props => props.theme.palette.background.paper}
-`;
 
 const NavToolbar = styled(Toolbar, globalOptions)`
   justify-content: center;
@@ -41,22 +32,16 @@ const LinkComponent = ({href, title, mobile}) => (
     </Link>
 );
 
-export default function Navigation() {
+export default function NavigationLinks({}) {
     const mobile = useSelector(getMobile);
 
     return (
         <>
-            <NavAppBar
-                position="relative"
-                component="div"
-                data-m={mobile}
-            >
-                <NavToolbar data-m={mobile}>
-                    <LinkComponent href="#about-me" title="About Me" mobile={mobile}/>
-                    <LinkComponent href="#experience" title="Experience" mobile={mobile}/>
-                    <LinkComponent href="#projects" title="Projects" mobile={mobile}/>
-                </NavToolbar>
-            </NavAppBar>
+            <NavToolbar data-m={mobile}>
+                <LinkComponent href="/mediation" title="Mediation" mobile={mobile}/>
+                <LinkComponent href="/contract-writing" title="Contract Writing" mobile={mobile}/>
+                <LinkComponent href="/contact" title="Contact" mobile={mobile}/>
+            </NavToolbar>
         </>
     );
 }

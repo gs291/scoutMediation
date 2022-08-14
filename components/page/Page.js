@@ -6,6 +6,7 @@ import {useMediaQuery, useTheme} from '@mui/material';
 
 import Header from './Header';
 import Footer from '../footer/Footer';
+import Navigation from '../navigation/Navigation';
 import {updateMobile} from '../../lib/redux/actions';
 import {ga4SendPageView} from '../../lib/utils/ga4';
 
@@ -78,7 +79,7 @@ export default function Page(props) {
             <Global styles={globals} />
             <Header />
             <PageContainer>
-                <Intro />
+                <Navigation />
                 <Main>
                     {props.children}
                 </Main>
