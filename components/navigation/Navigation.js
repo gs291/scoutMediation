@@ -10,14 +10,18 @@ export default function Navigation({}) {
 
     return (
         <>
-            <AppBar position="relative">
+            <AppBar
+                position="relative"
+                color="transparent"
+                elevation={0}
+            >
                 {router.pathname === '/' ? (
                     <Banner />
                 ) : (
                     <RegularBanner />
                 )}
-                <NavigationLinks />
             </AppBar>
+            <NavigationLinks />
         </>
     );
 }

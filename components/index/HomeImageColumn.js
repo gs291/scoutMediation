@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import {styled} from '@mui/material/styles';
 
 import HomeAboutMe from './HomeAboutMe';
+import profilePic from '../../public/scout.jpg';
 
 const ColumnContainer = styled('div')`
   display: flex;
@@ -10,10 +12,23 @@ const ColumnContainer = styled('div')`
 `;
 
 const ImageContainer = styled('div')`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-bottom: 30px;
+`;
+
+const ImageWrapper = styled('div')`
+  position: relative;
+
   min-width: 300px;
-  width: 100%;
+  max-width: 400px;
   height: 500px;
-  background-color: gray;
+`;
+
+const StyledImage = styled(Image)`
+  object-fit: cover;
 `;
 
 export default function HomeImageColumn({...rest}) {
@@ -22,7 +37,15 @@ export default function HomeImageColumn({...rest}) {
         <>
             <ColumnContainer {...rest}>
                 <ImageContainer>
-
+                    <ImageWrapper>
+                        <StyledImage
+                            src={profilePic}
+                            quality={100}
+                            alt="Picture of Scout Anatricia"
+                            layout="fill"
+                            priority
+                        />
+                    </ImageWrapper>
                 </ImageContainer>
                 <HomeAboutMe />
             </ColumnContainer>
