@@ -7,11 +7,17 @@ import {getMobile} from '../../lib/redux/selectors';
 import {globalOptions} from '../../lib/utils/emotionStyled';
 
 const NavToolbar = styled(Toolbar, globalOptions)`
+  background-color: ${props => props.theme.palette.toolbar.primary};
   justify-content: center;
   gap: 0 ${props => props['data-m'] ? 20 : 40}px;
+  
+  z-index: 1;
+  position: sticky;
+  top: 0;
 `;
 
 const MLink = styled(MUILink)`
+  color: ${props => props.theme.palette.textOpposite.primary};
   &:hover {
     text-decoration: underline;
     color: ${props => props.theme.palette.primary.hover};
